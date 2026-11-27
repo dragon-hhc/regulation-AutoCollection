@@ -1,0 +1,38 @@
+{
+ "schema": 1,
+ "run_id": "20261127-151211",
+ "ok": true,
+ "content_hash": "2d02082c75e7060b4b582b75dde5780ff1d96cd2bf04c5f3b37a6bef86d4bb75a207bb9237b5e1eb1f603afd725a2ff04fb548c9fe21f92ccb14adff80e7696b",
+ "fetched_at": "2026-11-27T15:41:54+08:00",
+ "document": {
+  "name": "指定外籍移工匯兌公司訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法（民國 110 年 09 月 10 日 金管法字第11001947041號 公告）",
+  "source_name": "金融監督管理委員會主管法規查詢系統",
+  "source_url": "https://law.fsc.gov.tw/LawContent.aspx?id=GL003281",
+  "status": "現行",
+  "doc_type": "函釋",
+  "promulgated_date": "民國 110 年 09 月 10 日",
+  "amended_date": "NA",
+  "effective_date": "NA",
+  "history": "",
+  "articles": [
+   {
+    "no": "函釋全文",
+    "text": "法規功能按鈕區\n主    旨：指定外籍移工匯兌公司訂定個人資料檔案安全維護計畫及業務終止後個人\n資料處理方法，並自即日生效。\n依    據：個人資料保護法第二十七條第二項。\n公告事項：外籍移工匯兌公司為個人資料保護法第二十七條第二項及「金融監督管理\n委員會指定非公務機關個人資料檔案安全維護辦法」所定，應訂定個人資\n料檔案安全維護計畫及業務終止後個人資料處理方法之非公務機關。",
+    "chapter": ""
+   }
+  ],
+  "metadata": {
+   "發文字號": "金管法字第11001947041號 公告",
+   "法規體系": "本會/法律事務處",
+   "fsc_id": "GL003281",
+   "related_law": "金融監督管理委員會指定非公務機關個人資料檔案安全維護辦法"
+  },
+  "metadata_only": false,
+  "fetch_method": "requests",
+  "fetch_note": "",
+  "fetched_at": "2026-11-27T15:41:54+08:00",
+  "category": "金融監理",
+  "parent_law": "金融監督管理委員會指定非公務機關個人資料檔案安全維護辦法",
+  "version_label": "民國 110 年 09 月 10 日"
+ }
+}

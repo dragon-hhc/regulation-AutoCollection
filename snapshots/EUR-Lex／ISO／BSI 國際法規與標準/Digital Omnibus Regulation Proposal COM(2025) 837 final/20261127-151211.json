@@ -1,0 +1,36 @@
+{
+ "schema": 1,
+ "run_id": "20261127-151211",
+ "ok": true,
+ "content_hash": "b7ef049d456f36c024969df8e3dd2112e5404ed29e9dd157690bac79a2daefe3cb9404e53f5fbc4165f80857a0ea42d70003a8e79e8b26bc280e19abe584cbd1",
+ "fetched_at": "2026-11-27T07:44:33+00:00",
+ "document": {
+  "name": "Digital Omnibus Regulation Proposal COM(2025) 837 final",
+  "source_name": "EUR-Lex／ISO／BSI 國際法規與標準",
+  "source_url": "https://eur-lex.europa.eu/procedure/EN/2025_360",
+  "status": "提案",
+  "doc_type": "草案",
+  "promulgated_date": "19/11/2025",
+  "amended_date": "24/11/2026",
+  "effective_date": "NA",
+  "history": "",
+  "articles": [],
+  "metadata": {
+   "程序編號": "2025/0360(COD)",
+   "EUR-Lex procedure 狀態": "NA",
+   "EP Legislative Observatory 狀態": "Awaiting committee decision",
+   "最新事件日期": "24/11/2026",
+   "最新事件": "Institution/body",
+   "事件列表": "19/11/2025 Legislative proposal published | 19/11/2025 Document attached to the procedure | 19/11/2025 Document type | 19/01/2026 Committee referral announced in Parliament, 1st reading | 13/02/2026 Contribution | 24/02/2026 Council of the European Union | 25/02/2026 LIBE | 25/02/2026 SCHENK Oliver (EPP) SANCHO MURILLO Elena (S&D) VARAUT Alexandre (PfE) RECHAGNEUX Julie (PfE) SOLIER Diego (ECR) TYNKKYNEN Sebastian (ECR) MCNAMARA Michael (Renew) JOVEVA Irena (Renew) BOESELAGER Damian (Greens/EFA) GREGOROVÁ Markéta (Greens/EFA) BARRENA ARZA Pernando (The Left) OLIVEIRA João (The Left) KHAN Mary (ESN) | 02/03/2026 JURI | 03/03/2026 Contribution | 04/03/2026 Contribution | 10/03/2026 EESC | 18/03/2026 CofR | 23/03/2026 Contribution | 31/03/2026 Contribution | 13/04/2026 Contribution | 30/04/2026 Contribution | 07/05/2026 Contribution | 07/05/2026 Additional information | 22/06/2026 Amendments tabled in committee | 27/07/2026 Amendments tabled in committee | 27/07/2026 Committee opinion | 20/10/2026 European Magazine Media Association | 26/10/2026 Groupe ADP | 27/10/2026 Shopify Inc. | 04/11/2026 Sanoma Media Finland Oy | 05/11/2026 CRITEO Technology SAS | 05/11/2026 noyb - European Center for Digital Rights | 05/11/2026 European Tech Alliance | 09/11/2026 Elinkeinoelämän keskusliitto | 11/11/2026 Committee opinion | 12/11/2026 European Newspaper Publishers' Association | 16/11/2026 EBU-UER (European Broadcasting Union) | 17/11/2026 DuckDuckGo, Inc. | 17/11/2026 German Ministry | 17/11/2026 The European Interactive Digital Advertising Alliance | 18/11/2026 FIGIEFA - Fédération Internationale des Grossistes, Importateurs & Exportateurs en Fournitures Automobiles / International Federation of Automotive Distributors | 18/11/2026 Interactive Advertising Bureau Europe | 19/11/2026 Zentralverband des Deutschen Handwerks e.V. | 19/11/2026 ARD-Europabüro | 20/11/2026 Document type | 20/11/2026 Bundesverband Digitalpublisher und Zeitungsverleger | 23/11/2026 DOT Europe | 24/11/2026 Institution/body",
+   "已刊登OJ": "否",
+   "正式編號": "NA"
+  },
+  "metadata_only": true,
+  "fetch_method": "requests",
+  "fetch_note": "後設資料型條目無上一版全文，基準線以本次後設資料為準",
+  "fetched_at": "2026-11-27T07:44:33+00:00",
+  "category": "國際",
+  "parent_law": "",
+  "version_label": "2025/0360(COD) @ 24/11/2026"
+ }
+}

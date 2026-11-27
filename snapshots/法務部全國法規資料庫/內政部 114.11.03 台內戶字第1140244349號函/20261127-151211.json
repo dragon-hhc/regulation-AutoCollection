@@ -1,0 +1,38 @@
+{
+ "schema": 1,
+ "run_id": "20261127-151211",
+ "ok": true,
+ "content_hash": "84b60ef16ba28efd6ed59c1df39165ab7c07da23dc7b06c1d18545984cda094bae6e8d11d1924faf5bb116e8dd9523b027c831fc1e45cc1d047026808ee0eecf",
+ "fetched_at": "2026-11-27T07:22:33+00:00",
+ "document": {
+  "name": "內政部 114.11.03 台內戶字第1140244349號函",
+  "source_name": "法務部全國法規資料庫",
+  "source_url": "https://laws.gov.taipei/Law/Interpretation/Content/FE393689",
+  "status": "現行",
+  "doc_type": "函釋",
+  "promulgated_date": "民國 114 年 11 月 03 日",
+  "amended_date": "NA",
+  "effective_date": "NA",
+  "history": "",
+  "articles": [
+   {
+    "no": "函釋全文",
+    "text": "要　　旨：檢送內政部 114  年 10 月 16 日「114 年戶籍法規與實務研習會第 2\n梯次」綜合座談提案彙整表\n主    旨：檢送本部 114  年 10 月 16 日「114 年戶籍法規與實務研習會第 2  梯\n次」綜合座談提案彙整表 1  份，請查照。\n正    本：各直轄市、縣（市）政府\n副    本：\n圖表附件：「114年戶籍法規與實務研習會第2梯次」綜合座談提案彙整表.pdf\n:::本月造訪人次\n0\n本月頁面瀏覽人次\n0\n總造訪人次\n(自93.07.26起)\n0\n頁面總瀏覽人次\n(自105.7.15起)\n0\n快速回到頁首按鈕\n您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態",
+    "chapter": ""
+   }
+  ],
+  "metadata": {
+   "臺北市法規查詢系統編號": "FE393689",
+   "相關條文": "第 5 條、第 15 條、第 16 條",
+   "法規編號": "FL010627",
+   "要旨": "檢送內政部 114  年 10 月 16 日「114 年戶籍法規與實務研習會第 2"
+  },
+  "metadata_only": false,
+  "fetch_method": "requests",
+  "fetch_note": "函釋取自臺北市法規查詢系統（轉載中央函釋）",
+  "fetched_at": "2026-11-27T07:22:33+00:00",
+  "category": "個資法體系",
+  "parent_law": "個人資料保護法",
+  "version_label": "114.11.03"
+ }
+}

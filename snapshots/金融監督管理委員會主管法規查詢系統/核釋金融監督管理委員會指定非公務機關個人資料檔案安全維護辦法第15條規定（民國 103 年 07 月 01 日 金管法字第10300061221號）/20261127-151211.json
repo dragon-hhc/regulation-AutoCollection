@@ -1,0 +1,38 @@
+{
+ "schema": 1,
+ "run_id": "20261127-151211",
+ "ok": true,
+ "content_hash": "1bdeb420fc645432e165175a88da256cd10b2fdfda3198ad443b68ad2ce166168a0bfda6fba15afd9fd1903716044178f58abf405abf7718774f99248e464b16",
+ "fetched_at": "2026-11-27T15:41:51+08:00",
+ "document": {
+  "name": "核釋金融監督管理委員會指定非公務機關個人資料檔案安全維護辦法第15條規定（民國 103 年 07 月 01 日 金管法字第10300061221號）",
+  "source_name": "金融監督管理委員會主管法規查詢系統",
+  "source_url": "https://law.fsc.gov.tw/LawContent.aspx?id=GL001225",
+  "status": "現行",
+  "doc_type": "函釋",
+  "promulgated_date": "民國 103 年 07 月 01 日",
+  "amended_date": "NA",
+  "effective_date": "NA",
+  "history": "",
+  "articles": [
+   {
+    "no": "函釋全文",
+    "text": "法規功能按鈕區\n一、關於金融監督管理委員會指定非公務機關個人資料檔案安全維護辦法\n第 15 條所定「自我評估報告」，如非公務機關依內部控制及稽核制\n度出具之相關報告，已涵蓋其內容及要件，且足以達成持續改善個人\n資料安全維護運作之規範意旨者，則無需重複提出該自我評估報告。\n二、本令自即日生效。",
+    "chapter": ""
+   }
+  ],
+  "metadata": {
+   "發文字號": "金管法字第10300061221號",
+   "法規體系": "本會/法律事務處",
+   "fsc_id": "GL001225",
+   "related_law": "金融監督管理委員會指定非公務機關個人資料檔案安全維護辦法"
+  },
+  "metadata_only": false,
+  "fetch_method": "requests",
+  "fetch_note": "",
+  "fetched_at": "2026-11-27T15:41:51+08:00",
+  "category": "金融監理",
+  "parent_law": "金融監督管理委員會指定非公務機關個人資料檔案安全維護辦法",
+  "version_label": "民國 103 年 07 月 01 日"
+ }
+}

@@ -1,0 +1,39 @@
+{
+ "schema": 1,
+ "run_id": "20261127-151211",
+ "ok": true,
+ "content_hash": "6a3cae3171a0f7853b7d4f2bc03596d40413c89099ec5f64c7be06420e5ce813b3b2f63ae3e74b2a766634f5b7b700be97f7fe77c85250c9926fc76eece7671e",
+ "fetched_at": "2026-11-27T07:45:33+00:00",
+ "document": {
+  "name": "BS 10012:2017+A1:2018",
+  "source_name": "EUR-Lex／ISO／BSI 國際法規與標準",
+  "source_url": "https://knowledge.bsigroup.com/products/data-protection-specification-for-a-personal-information-management-system",
+  "status": "現行",
+  "doc_type": "標準",
+  "promulgated_date": "31 Jul 2018",
+  "amended_date": "NA",
+  "effective_date": "NA",
+  "history": "",
+  "articles": [],
+  "metadata": {
+   "標準編號": "BS 10012:2017+A1:2018",
+   "標題": "Data protection. Specification for a personal information management system",
+   "狀態": "Withdrawn",
+   "發布日期": "31 Jul 2018",
+   "撤銷日期": "24 Apr 2026",
+   "ISBN": "978 0 539 01173 9",
+   "技術委員會": "IDT/1",
+   "Publisher": "BSI",
+   "ICS": "01.140.30 Documents in administration, commerce and industry | 03.100.99 Other standards related to company organization and management | 35.020 Information technology (IT) in general",
+   "版本說明": "BS 10012:2017+A1:2018 supersedes BS 10012:2017, which is withdrawn.",
+   "取代（前版）": "BS 10012:2017+A1:2018 supersedes BS 10012:2017, which is withdrawn."
+  },
+  "metadata_only": true,
+  "fetch_method": "requests",
+  "fetch_note": "BSI 官方狀態為 Withdrawn（撤銷日期 24 Apr 2026）；models 的 status 只允許 現行/草案/提案，暫保留 seed 設定，請主控決定是否調整；後設資料型條目無上一版全文，基準線以本次後設資料為準",
+  "fetched_at": "2026-11-27T07:45:33+00:00",
+  "category": "國際",
+  "parent_law": "",
+  "version_label": "BS 10012:2017+A1:2018"
+ }
+}

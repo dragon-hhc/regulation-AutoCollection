@@ -1,0 +1,42 @@
+{
+ "schema": 1,
+ "run_id": "20261127-151211",
+ "ok": true,
+ "content_hash": "d31b6eb7d3ff6acd66ea7228fdcfdf171f4fbc84649eefa1153e98c67c8e397ddb0179f2dd8cf873c15fc5cb833881ee74f397244a402790704d643e791ab34e",
+ "fetched_at": "2026-11-27T07:45:32+00:00",
+ "document": {
+  "name": "ISO/IEC 27701:2025",
+  "source_name": "EUR-Lex／ISO／BSI 國際法規與標準",
+  "source_url": "https://www.iso.org/standard/85819.html",
+  "status": "現行",
+  "doc_type": "標準",
+  "promulgated_date": "2025-10",
+  "amended_date": "NA",
+  "effective_date": "NA",
+  "history": "",
+  "articles": [],
+  "metadata": {
+   "標準編號": "ISO/IEC 27701:2025",
+   "標題": "Information security, cybersecurity and privacy protection — Privacy information management systems — Requirements and guidance",
+   "版次 edition": "2",
+   "發布日期": "2025-10",
+   "狀態": "Published",
+   "頁數": "64",
+   "技術委員會": "ISO/IEC JTC 1/SC 27",
+   "Stage": "International Standard published [60.60]",
+   "ICS": "35.030",
+   "Amendments": "NA",
+   "取代（前版）": "ISO/IEC 27701:2019",
+   "被取代（新版）": "ISO/IEC 27701",
+   "新版本偵測": "新版／修訂中：ISO/IEC 27701",
+   "ISO id": "85819"
+  },
+  "metadata_only": true,
+  "fetch_method": "playwright",
+  "fetch_note": "後設資料型條目無上一版全文，基準線以本次後設資料為準",
+  "fetched_at": "2026-11-27T07:45:32+00:00",
+  "category": "國際",
+  "parent_law": "",
+  "version_label": "ISO/IEC 27701:2025"
+ }
+}

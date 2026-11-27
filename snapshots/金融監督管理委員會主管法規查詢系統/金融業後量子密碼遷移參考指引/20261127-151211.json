@@ -1,0 +1,43 @@
+{
+ "schema": 1,
+ "run_id": "20261127-151211",
+ "ok": true,
+ "content_hash": "ea9219a7ce52baf8391dc5d0d40ed7016fcc4e4126fefce4c54e731d61dbef1b5e230a9a6c4bc581bb37769b7c4d218815c958caf2d766843fb396f747cfb495",
+ "fetched_at": "2026-11-27T15:44:03+08:00",
+ "document": {
+  "name": "金融業後量子密碼遷移參考指引",
+  "source_name": "金融監督管理委員會主管法規查詢系統",
+  "source_url": "https://law.fsc.gov.tw/LawContent.aspx?id=GL004329",
+  "status": "現行",
+  "doc_type": "指引",
+  "promulgated_date": "民國 115 年 06 月 17 日",
+  "amended_date": "NA",
+  "effective_date": "NA",
+  "history": "",
+  "articles": [
+   {
+    "no": "全文",
+    "text": "法規功能按鈕區\n1.中華民國一百十五年六月十七日金融監督管理委員會金管資字第 11501\n93128 號函訂定\n金融業後量子密碼遷移參考指引，內容詳如附件。",
+    "chapter": ""
+   }
+  ],
+  "metadata": {
+   "發文字號": "金管資字第1150193128號函",
+   "法規體系": "本會/資訊服務處",
+   "attachments": [
+    {
+     "name": "金融業後量子密碼遷移參考指引.pdf",
+     "url": "https://law.fsc.gov.tw/Download.ashx?FileID=25672&id=GL004329&type=LAW"
+    }
+   ],
+   "fsc_id": "GL004329"
+  },
+  "metadata_only": false,
+  "fetch_method": "requests",
+  "fetch_note": "頁面無條號結構，以全文為單一條目；前一版：歷史法規清單無資料（可能為首次發布）",
+  "fetched_at": "2026-11-27T15:44:03+08:00",
+  "category": "銀行業",
+  "parent_law": "",
+  "version_label": "民國 115 年 06 月 17 日"
+ }
+}
