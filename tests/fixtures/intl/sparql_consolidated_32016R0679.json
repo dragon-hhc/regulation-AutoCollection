@@ -1,0 +1,5 @@
+{"_comment": "格式：W3C SPARQL 1.1 Query Results JSON（https://www.w3.org/TR/sparql11-results-json/）；端點 https://publications.europa.eu/webapi/rdf/sparql。值 02016R0679-20160504 經 https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02016R0679-20160504 查證（2026-11-27）。開發沙箱無法直連端點，回應外框為依標準格式重建。",
+ "head": {"link": [], "vars": ["celex"]},
+ "results": {"distinct": false, "ordered": true, "bindings": [
+   {"celex": {"type": "literal", "datatype": "http://www.w3.org/2001/XMLSchema#string", "value": "02016R0679-20160504"}}
+ ]}}

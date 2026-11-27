@@ -1,0 +1,279 @@
+# 種子清單（主控初版）
+# 規則：name 必須是官方正式名稱原文（國際條目使用官方編號＋官方簡稱，完整標題見 note）；
+#       verified_by 必須是實際查證過的官方或主管機關頁面 URL。
+# #1 #2 #3 只能「新增」自己來源的條目，並填 verified_by；查不到正式名稱者不得列入。
+# 欄位說明見 regcrawler/models.py SeedEntry。
+
+laws:
+  # ───────── A. 個資法體系 ─────────
+  - name: 個人資料保護法
+    source: moj
+    category: 個資法體系
+    ids: {pcode: I0050021}
+    include_interpretations: true
+    verified_by: https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050021
+  - name: 個人資料保護法施行細則
+    source: moj
+    category: 個資法體系
+    parent_law: 個人資料保護法
+    include_interpretations: true
+    verified_by: https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050022
+  - name: 個人資料事故通知通報及應變辦法
+    source: moda   # 個資會籌備處草案預告；#1 負責定位官方預告頁面
+    category: 個資法體系
+    status: 草案
+    doc_type: 草案
+    parent_law: 個人資料保護法
+    verified_by: https://join.gov.tw/policies/detail/8bb40e4f-cf20-45f1-aa47-6a42958e323b
+  - name: 個人資料檔案安全維護管理辦法
+    source: moda
+    category: 個資法體系
+    status: 草案
+    doc_type: 草案
+    parent_law: 個人資料保護法
+    verified_by: https://join.gov.tw/policies/detail/5860d092-ac75-48ba-abd8-fdac12bd00df
+
+  # ───────── B. 資通安全管理法體系 ─────────
+  - name: 資通安全管理法
+    source: moj
+    category: 資安法體系
+    include_interpretations: true
+    verified_by: https://laws.gov.taipei/law/LawSearch/LawExport/FL088622?type=0
+  - name: 資通安全管理法施行細則
+    source: moj
+    category: 資安法體系
+    parent_law: 資通安全管理法
+    verified_by: https://laws.gov.taipei/law/LawSearch/LawExport/FL089964?type=0
+  - name: 資通安全事件通報應變及演練辦法
+    source: moj
+    category: 資安法體系
+    parent_law: 資通安全管理法
+    note: 原名稱「資通安全事件通報及應變辦法」，115.01.05 更名
+    verified_by: https://laws.gov.taipei/law/LawSearch/LawExport/FL089967?type=0
+  - name: 資通安全情資分享辦法
+    source: moj
+    category: 資安法體系
+    parent_law: 資通安全管理法
+    verified_by: https://www-api.moda.gov.tw/File/Get/acs/zh-tw/ltArXnOcbVAA9sx
+  - name: 資通安全維護計畫實施情形稽核辦法
+    source: moj
+    category: 資安法體系
+    parent_law: 資通安全管理法
+    verified_by: https://www-api.moda.gov.tw/File/Get/moda/zh-tw/jYHVlGUY3O9Kgx3
+  - name: 數位發展部所管特定非公務機關資通安全管理作業辦法
+    source: moj
+    category: 資安法體系
+    parent_law: 資通安全管理法
+    verified_by: https://www-api.moda.gov.tw/File/Get/moda/zh-tw/jYHVlGUY3O9Kgx3
+
+  # ───────── C. 金融監理 ─────────
+  - name: 公開發行公司建立內部控制制度處理準則
+    source: fsc
+    category: 金融監理
+    include_interpretations: true
+    verified_by: https://law.fsc.gov.tw/LawContent.aspx?id=FL021141
+  - name: 證券暨期貨市場各服務事業建立內部控制制度處理準則
+    source: fsc
+    category: 金融監理
+    include_interpretations: true
+    verified_by: https://law.fsc.gov.tw/LawContent.aspx?id=FL022569
+  - name: 金融監督管理委員會指定非公務機關個人資料檔案安全維護辦法
+    source: fsc
+    category: 金融監理
+    parent_law: 個人資料保護法
+    include_interpretations: true
+    verified_by: https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380233
+  - name: 上市上櫃公司資通安全管控指引
+    source: twse
+    category: 金融監理
+    doc_type: 指引
+    parent_law: 公開發行公司建立內部控制制度處理準則
+    verified_by: https://dsp.twse.com.tw/public/static/downloads/listedCompany/上市上櫃公司資通安全管控指引_20241105151007.docx
+  - name: 上市上櫃公司資通安全管控指引
+    source: tpex
+    category: 金融監理
+    doc_type: 指引
+    parent_law: 公開發行公司建立內部控制制度處理準則
+    verified_by: https://twse-regulation.twse.com.tw/TW/law/DAT0201.aspx?FLCODE=FL104387
+
+  # ───────── D. 國際（只追蹤後設資料者 metadata_only: true）─────────
+  - name: Regulation (EU) 2016/679 (General Data Protection Regulation)
+    source: intl
+    category: 國際
+    note: 名稱為官方編號＋官方簡稱（General Data Protection Regulation 為該規則標題所定簡稱）；完整官方標題以 EUR-Lex 為準
+    ids: {celex: 32016R0679}
+    url: https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679
+    verified_by: https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679
+  - name: Digital Omnibus Regulation Proposal COM(2025) 837 final
+    source: intl
+    note: 名稱為歐盟執委會對外使用之提案稱呼＋官方文件編號；完整官方標題以 EUR-Lex 程序 2025/0360(COD) 為準
+    category: 國際
+    status: 提案
+    doc_type: 草案
+    metadata_only: true
+    ids: {procedure: 2025/0360(COD), celex_proposal: 52025PC0837}
+    url: https://eur-lex.europa.eu/procedure/EN/2025_360
+    verified_by: https://www.europarl.europa.eu/legislative-train/theme-a-new-plan-for-europe-s-sustainable-prosperity-and-competitiveness/file-digital-package
+  - name: ISO/IEC 27001:2022
+    source: intl
+    category: 國際
+    doc_type: 標準
+    metadata_only: true
+    ids:
+      iso_id: 82875
+      reference: ISO/IEC 27001:2022
+      known_amendments: [ISO/IEC 27001:2022/Amd 1:2024]
+      amendment_ids: {ISO/IEC 27001:2022/Amd 1:2024: 88435}
+    url: https://www.iso.org/standard/82875.html
+    verified_by: https://committee.iso.org/standard/27001
+  - name: ISO/IEC 27701:2025
+    source: intl
+    category: 國際
+    doc_type: 標準
+    metadata_only: true
+    ids:
+      iso_id: 85819
+      reference: ISO/IEC 27701:2025
+      known_amendments: []
+    url: https://www.iso.org/standard/85819.html
+    verified_by: https://committee.iso.org/standard/85819.html
+  - name: BS 10012:2017+A1:2018
+    source: intl
+    category: 國際
+    doc_type: 標準
+    metadata_only: true
+    note: BSI Knowledge 官方頁面顯示 Withdrawn（24 Apr 2026）；持續追蹤是否有取代標準
+    ids:
+      reference: BS 10012:2017+A1:2018
+      bsi_slug: data-protection-specification-for-a-personal-information-management-system
+    url: https://knowledge.bsigroup.com/products/data-protection-specification-for-a-personal-information-management-system
+    verified_by: https://knowledge.bsigroup.com/products/data-protection-specification-for-a-personal-information-management-system
+
+  # ───────── E. 待 subagent 查證後新增 ─────────
+  # 銀行業資安規範（#2）、經濟部所定辦法（#1）、數位發展部所定辦法（#1）、國家科學及技術委員會所定辦法（#1）
+
+  # ── #1 新增（2026-11-27 查證）──
+  # 名稱、pcode 取自全國法規資料庫官方開放資料（https://law.moj.gov.tw/api/ch/order/json，UpdateDate 20261113；
+  # 經官方 API 原樣鏡像 github.com/kong0107/mojLawSplitJSON 比對），verified_by 為全國法規資料庫該法規頁；
+  # 標 ※ 者另以 WebFetch／WebSearch 直接確認官方頁存在。parent_law 依各辦法第 1 條授權依據原文。
+  # 數位發展部所定辦法
+  - name: 資通安全責任等級分級辦法   # ※ WebFetch：修正日期 民國 115 年 01 月 07 日
+    source: moj
+    category: 資安法體系
+    parent_law: 資通安全管理法
+    ids: {pcode: A0030304}
+    verified_by: https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030304
+  - name: 公務機關所屬人員辦理資通安全事項作業辦法
+    source: moj
+    category: 資安法體系
+    parent_law: 資通安全管理法
+    ids: {pcode: A0030308}
+    verified_by: https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030308
+  - name: 危害國家資通安全產品審查辦法
+    source: moj
+    category: 資安法體系
+    parent_law: 資通安全管理法
+    ids: {pcode: K0060168}
+    verified_by: https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0060168
+  - name: 電信事業資通安全管理辦法
+    source: moj
+    category: 資安法體系
+    parent_law: 電信管理法
+    ids: {pcode: K0060140}
+    verified_by: https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0060140
+  - name: 數位經濟相關產業個人資料檔案安全維護管理辦法
+    source: moj
+    category: 個資法體系
+    parent_law: 個人資料保護法
+    ids: {pcode: K0010162}
+    verified_by: https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0010162
+  # 經濟部所定辦法
+  - name: 經濟部所管特定非公務機關資通安全管理作業辦法   # ※ WebSearch 結果含全國法規資料庫頁
+    source: moj
+    category: 資安法體系
+    parent_law: 資通安全管理法
+    ids: {pcode: J0010055}
+    verified_by: https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0010055
+  - name: 製造業及技術服務業個人資料檔案安全維護管理辦法   # ※ WebSearch 結果含全國法規資料庫頁
+    source: moj
+    category: 個資法體系
+    parent_law: 個人資料保護法
+    ids: {pcode: J0030130}
+    verified_by: https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0030130
+  - name: 零售業個人資料檔案安全維護管理辦法
+    source: moj
+    category: 個資法體系
+    parent_law: 個人資料保護法
+    ids: {pcode: J0080062}
+    verified_by: https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080062
+  - name: 電業與公用天然氣事業及加油站業個人資料檔案安全維護管理辦法   # ※ WebSearch 結果含全國法規資料庫頁
+    source: moj
+    category: 個資法體系
+    parent_law: 個人資料保護法
+    ids: {pcode: J0130066}
+    verified_by: https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0130066
+  - name: 自來水事業個人資料檔案安全維護計畫標準辦法
+    source: moj
+    category: 個資法體系
+    parent_law: 個人資料保護法
+    ids: {pcode: J0110089}
+    verified_by: https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0110089
+  - name: 著作權集體管理團體個人資料檔案安全維護管理辦法
+    source: moj
+    category: 個資法體系
+    parent_law: 個人資料保護法
+    ids: {pcode: J0070050}
+    verified_by: https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0070050
+  # 國家科學及技術委員會所定辦法
+  - name: 國家科學及技術委員會所管特定非公務機關資通安全管理作業辦法   # ※ WebFetch：修正日期 民國 111 年 12 月 01 日
+    source: moj
+    category: 資安法體系
+    parent_law: 資通安全管理法
+    ids: {pcode: H0160073}
+    verified_by: https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0160073
+
+  # ── #2 新增：重大訊息處理程序（含資通安全事件重訊條款）──
+  - name: 臺灣證券交易所股份有限公司對有價證券上市公司重大訊息之查證暨公開處理程序
+    source: twse
+    category: 金融監理
+    doc_type: 規章
+    ids: {flcode: FL007111}
+    note: 第 4 條第二十六款「發生災難、集體抗議、罷工、環境污染、資通安全事件或其他重大情事」
+    verified_by: https://twse-regulation.twse.com.tw/TW/law/DAT0201.aspx?FLCODE=FL007111
+  - name: 財團法人中華民國證券櫃檯買賣中心對有價證券上櫃公司重大訊息之查證暨公開處理程序
+    source: tpex
+    category: 金融監理
+    doc_type: 規章
+    ids: {selaw_sysnumber: LW10812093}
+    note: 第 4 條第二十六款含「資通安全事件」；正式名稱另見櫃買中心修正條文對照表 https://www.tpex.org.tw/storage/eb_data/11110/111006789711-4.pdf（WebSearch 結果標題）
+    verified_by: https://www.selaw.com.tw/Chinese/RegulatoryInformationResult?sysNumber=LW10812093
+
+  # ── #2 新增：銀行業／金融業資安規範（金管會主管法規查詢系統）──
+  - name: 金融控股公司及銀行業內部控制及稽核制度實施辦法
+    source: fsc
+    category: 銀行業
+    ids: {fsc_id: FL049894}
+    include_interpretations: true
+    note: 第 9、14、24、25、43 條等規範資訊安全制度、資訊安全專責單位及資訊安全長
+    verified_by: https://law.fsc.gov.tw/LawContent.aspx?id=FL049894
+  - name: 金融監督管理委員會所管特定非公務機關資通安全管理作業辦法
+    source: fsc
+    category: 銀行業
+    parent_law: 資通安全管理法
+    ids: {fsc_id: GL002646}
+    note: 第 1 條「本辦法依資通安全管理法（以下簡稱本法）第十六條第六項及第十七條第四項規定訂定之。」適用金管會所管特定非公務機關（含銀行業）
+    verified_by: https://law.fsc.gov.tw/LawContent.aspx?id=GL002646
+  - name: 金融業導入零信任架構參考指引
+    source: fsc
+    category: 銀行業
+    doc_type: 指引
+    ids: {fsc_id: GL003923}
+    note: 金管資字第1130193942號函；全文 5 點，另有附表 PDF
+    verified_by: https://law.fsc.gov.tw/LawContent.aspx?id=GL003923
+  - name: 金融業後量子密碼遷移參考指引
+    source: fsc
+    category: 銀行業
+    doc_type: 指引
+    ids: {fsc_id: GL004329}
+    note: 列於法規體系「本會/資訊服務處」，115.06.17
+    verified_by: https://law.fsc.gov.tw/LawCategoryContentList.aspx?CategoryID=A104&size=40&page=1
