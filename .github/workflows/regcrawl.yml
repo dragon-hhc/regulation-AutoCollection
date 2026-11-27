@@ -1,0 +1,114 @@
+# 資安／個資法規知識庫全自動爬蟲（#4）
+#
+# 排程：每月 1 日與 15 日 台灣時間（Asia/Taipei, UTC+8，無日光節約）上午 09:17 執行。
+#   GitHub Actions 的 cron 一律以 UTC 解讀：09:17 (UTC+8) = 01:17 UTC，同一天 → "17 1 1,15 * *"
+#   （刻意避開整點，整點排程常因 GitHub 負載而延遲。）
+#
+# 注意：public repo 若 60 天內沒有任何 repository 活動，GitHub 會自動停用 schedule 排程。
+#   重新啟用方式：Actions 頁面手動 Enable / 執行 workflow_dispatch，或任意 commit。
+#   本 workflow 每次執行會把 snapshots/ 的變更 commit 回 repo，通常即可維持活動；
+#   但若連續多次「無變更」而略過 commit，仍可能被停用，請留意 Actions 頁面的停用通知。
+#
+# 有頭模式：設定 repository variable REGCRAWL_HEADFUL=1 時，以 xvfb-run 執行（playwright_human 改用 headless=False）。
+
+name: regcrawl
+
+on:
+  schedule:
+    - cron: "17 1 1,15 * *"   # = 台灣時間每月 1、15 日 09:17
+  workflow_dispatch:
+    inputs:
+      sources:
+        description: "只執行指定來源（逗號分隔，例如 moj,fsc；空白 = 全部）"
+        required: false
+        default: ""
+        type: string
+      force_baseline:
+        description: "強制重建基準線（以 REGCRAWL_FORCE_BASELINE=1 傳給 cli）"
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: regcrawl-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      PYTHONUNBUFFERED: "1"
+      PYTHONIOENCODING: "utf-8"
+      TZ: Asia/Taipei
+      REGCRAWL_HEADFUL: ${{ vars.REGCRAWL_HEADFUL || '0' }}
+      REGCRAWL_FORCE_BASELINE: ${{ github.event_name == 'workflow_dispatch' && inputs.force_baseline && '1' || '0' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Install Playwright Chromium
+        run: python -m playwright install --with-deps chromium
+
+      - name: Run crawler
+        env:
+          SOURCES: ${{ inputs.sources }}
+        run: |
+          set -euo pipefail
+          args=(--out output)
+          if [ -n "${SOURCES:-}" ]; then
+            args+=(--sources "$SOURCES")
+          fi
+          if [ "${REGCRAWL_HEADFUL}" = "1" ]; then
+            xvfb-run -a python -m regcrawler.cli "${args[@]}"
+          else
+            python -m regcrawler.cli "${args[@]}"
+          fi
+
+      - name: Date stamp
+        id: stamp
+        if: always()
+        run: echo "date=$(TZ=Asia/Taipei date +%Y%m%d-%H%M)" >> "$GITHUB_OUTPUT"
+
+      - name: Upload Excel reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: regcrawl-${{ steps.stamp.outputs.date }}
+          path: output/*.xlsx
+          if-no-files-found: warn
+          retention-days: 90
+
+      - name: Commit snapshots
+        if: success()
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A snapshots/
+          if git diff --cached --quiet; then
+            echo "snapshots/ 無變更，略過 commit"
+            exit 0
+          fi
+          git commit -m "chore(snapshots): regcrawl ${{ steps.stamp.outputs.date }} [skip ci]"
+          for i in 1 2 3; do
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            echo "push 失敗，第 $i 次重試…"; sleep $((i * 10))
+          done
+          exit 1
